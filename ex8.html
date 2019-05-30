@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Loop & Array</h1>
+    <script type="text/javascript">
+      var coworkers = ['한국 넘버원 포털','글로벌 넘버원','구닥다리','paganbikes','ghspeed','instagram'];
+    </script>
+    <h2>Co workers</h2>
+    <ul>
+      <script type="text/javascript">//배열 반복문 수정 할필요 X
+      i = 0
+        while (i < coworkers.length) {
+          document.write('<li><a href="http://www.' + coworkers[i] + '.com" title="우리가 만든 '+coworkers[i]+'">' + coworkers[i] + '</a></li>');
+          i = i + 1
+        }
+      </script>
+    </ul>
+  </body>
+</html>

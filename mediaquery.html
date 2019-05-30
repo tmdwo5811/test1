@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <style media="screen">
+      input{width:150px;margin-top:20px;margin-left:40px;height:40px;
+      }
+    </style>
+    <script type="text/javascript">
+    function LinksSetColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+      alist[i].style.color = color;
+      i = i + 1;
+      }
+    }
+    function bodySetColor(color){
+        document.querySelector('.dominica').style.backgroundColor = color;
+    }
+    function nightDayHandler(self){
+      var target123 = document.querySelector('.dominica');
+        if(
+          self.value === '누르면 빨강색'
+          ){
+          self.value='누르면 파랑색';
+        bodySetColor('yellow');
+        LinksSetColor('powderblue');
+        }
+      else{
+        target123.style.borderBottom='5px solid red';
+        self.value='누르면 빨강색';
+        LinksSetColor('green');
+        bodySetColor('red');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="dominica">
+      <a href="#">지안이 사랑해</a>
+    </div>
+    <ol>
+      <li><a href="#">55555</a></li>
+        <li><a href="#">2222</a></li>
+          <li><a href="#">11111</a></li>
+    </ol>
+    <br><br><br><br>
+    <input type="button" value="누르면 빨강색" onclick="
+      nightDayHandler(this);
+    ">
+  </body>
+</html>
